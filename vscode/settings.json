@@ -1,0 +1,129 @@
+{
+  // Customization
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.rulers": [80, 120],
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.minimap.enabled": false,
+  "workbench.tree.indent": 18,
+  "workbench.layoutControl.enabled": false,
+  "workbench.tips.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.dragToOpenWindow": false,
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "none",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "window.titleSeparator": " | ",
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+
+  // VSCode configuration
+  "editor.accessibilitySupport": "off",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.dragAndDrop": false,
+  "editor.suggest.localityBonus": true,
+  "workbench.editor.enablePreview": true,
+  "extensions.ignoreRecommendations": true,
+
+  // Languages
+  "python.languageServer": "Pylance",
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "",
+      "depth": 5
+    }
+  ],
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "off", // Mypy handle it
+  "debugpy.debugJustMyCode": false,
+
+  // Lint & Format
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "ruff.lineLength": 80,
+  "ruff.importStrategy": "useBundled",
+  "ruff.configurationPreference": "filesystemFirst",
+  "mypy-type-checker.importStrategy": "useBundled",
+
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "evenBetterToml.formatter.allowedBlankLines": 2,
+  "evenBetterToml.formatter.columnWidth": 80,
+  "evenBetterToml.formatter.alignComments": false,
+
+  "[json][jsonc][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  },
+  "[vue][ts][js]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
+  "prettier.enable": true,
+
+  "[sql]": {
+    "editor.tabSize": 4
+  },
+
+  "cSpell.language": "en,ru",
+  "cSpell.userWords": [
+    "autofetch",
+    "autorefresh",
+    "bradlc",
+    "charliermarsh",
+    "dbaeumer",
+    "debugpy",
+    "esbenp",
+    "mypy",
+    "pycache",
+    "Pylance",
+    "pytest",
+    "tailwindcss",
+    "tamasfe",
+    "venv"
+  ],
+
+  // Terminal | Configuration
+  "terminal.integrated.defaultLocation": "view",
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  // Search
+  "search.quickOpen.history.filterSortOrder": "recency",
+
+  // Git
+  "git.autofetch": false,
+  "git.autorefresh": true,
+
+  // Files configs
+  "files.exclude": {
+    // python
+    "**/__pycache__": true,
+    ".venv": true,
+    ".mypy_cache/": true,
+    ".pytest_cache/": true,
+    ".ruff_cache/": true,
+    // js
+    "node_modules": true
+  },
+  "files.associations": {
+    "*.tw.css": "tailwindcss"
+  }
+}
