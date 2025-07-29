@@ -1,6 +1,6 @@
 {
   // Customization
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrains Mono", // Download here https://www.jetbrains.com/lp/mono/
   "editor.fontLigatures": true,
   "editor.rulers": [80, 120],
   "workbench.iconTheme": "material-icon-theme",
