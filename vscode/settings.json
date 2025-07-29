@@ -26,6 +26,11 @@
   // VSCode configuration
   "editor.accessibilitySupport": "off",
   "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.unicodeHighlight.allowedLocales": {
+    "_os": true,
+    "_vscode": true,
+    "ru": true
+  },
   "editor.scrollBeyondLastLine": false,
   "editor.dragAndDrop": false,
   "editor.suggest.localityBonus": true,
