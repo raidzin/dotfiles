@@ -7,8 +7,8 @@
         {
           "type": "python",
           "style": "plain",
-          "foreground": "#56B6C2",
-          "template": "(<#69FF94>{{ .Venv }}</>) "
+          "foreground": "#69FF94",
+          "template": "{{ .Venv }} "
         },
         {
           "foreground": "#ffffff",
