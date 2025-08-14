@@ -1,0 +1,23 @@
+[user]
+	name = ...
+	email = ...
+	signingkey = ...
+[http]
+	sslVerify = false
+[credential]
+	helper = manager
+[diff]
+	algorithm = histogram
+[push]
+	default = current
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+	prunetags = true
+[merge]
+	conflictstyle = zdiff3
+[alias]
+	logs = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %C(blue)%G?%C(reset): %an%C(reset)%C(auto)%d%C(reset)' --all
+[branch]
+	sort = -committerdate
