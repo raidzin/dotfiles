@@ -3,11 +3,14 @@
   "editor.fontFamily": "JetBrains Mono", // Download here https://www.jetbrains.com/lp/mono/
   "editor.fontLigatures": true,
   "editor.rulers": [80, 120],
-  "workbench.iconTheme": "material-icon-theme",
   "editor.cursorBlinking": "smooth",
   "editor.smoothScrolling": true,
   "editor.scrollbar.horizontal": "hidden",
   "editor.minimap.enabled": false,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": false,
+  "workbench.editor.showTabs": "none",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.indent": 18,
   "workbench.layoutControl.enabled": false,
   "workbench.tips.enabled": false,
@@ -17,6 +20,7 @@
   "workbench.editor.dragToOpenWindow": false,
   "window.commandCenter": false,
   "breadcrumbs.enabled": false,
+  "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "none",
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
@@ -54,8 +58,9 @@
   // Lint & Format
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 80,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
 
   "[python]": {
     "editor.tabSize": 4,
@@ -81,11 +86,29 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": ["source.fixAll.eslint"]
   },
+  "[vue]": {
+    "editor.rulers": [100]
+  },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "prettier.enable": true,
 
   "[sql]": {
     "editor.tabSize": 4
+  },
+
+  "[elixir]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.formatOnType": true,
+    "editor.trimAutoWhitespace": false,
+    "editor.wordWrapColumn": 98,
+    "editor.rulers": [98],
+    "editor.snippetSuggestions": "inline"
+  },
+  "emmet.includeLanguages": {
+    "phoenix-heex": "html"
+  },
+  "tailwindCSS.includeLanguages": {
+    "phoenix-heex": "html"
   },
 
   "cSpell.language": "en,ru",
@@ -130,5 +153,20 @@
   },
   "files.associations": {
     "*.tw.css": "tailwindcss"
-  }
+  },
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "workbench.startupEditor": "none"
 }
