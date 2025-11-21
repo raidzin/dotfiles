@@ -26,10 +26,10 @@ display_host = true
 [[blocks.segments]]
 type = "path"
 background = "#91ddff"
-foreground = "#100e23"
+foreground = "#050510"
 powerline_symbol = ""
 style = "powerline"
-template = " {{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{ .Segments.Git.UpstreamIcon }} {{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ path .Path .Location }}{{ end }} "
+template = " {{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{if .Segments.Git.UpstreamIcon }}{{ .Segments.Git.UpstreamIcon }}{{ else }}{{ end }} {{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ path .Path .Location }}{{ end }} "
 
 [blocks.segments.properties]
 style = "agnoster_full"
@@ -39,7 +39,7 @@ style = "agnoster_full"
 type = "project"
 style = "powerline"
 powerline_symbol = ""
-foreground = "#100e23"
+foreground = "#050510"
 background = "#fcea47"
 template = " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }}{{ end }} "
 
@@ -47,7 +47,7 @@ template = " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Versio
 type = "git"
 style = "powerline"
 powerline_symbol = ""
-foreground = "#100e23"
+foreground = "#050510"
 background = "#95ffa4"
 background_templates = [
   "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
@@ -112,7 +112,7 @@ template = "$"
 
 [[tooltips]]
 style = "diamond"
-foreground = "#100e23"
+foreground = "#050510"
 background = "#e4e140"
 leading_diamond = ""
 trailing_diamond = ""
@@ -126,7 +126,7 @@ display_mode = "context"
 
 [[tooltips]]
 style = "diamond"
-foreground = "#100e23"
+foreground = "#050510"
 background = "#e4e140"
 leading_diamond = ""
 trailing_diamond = ""
@@ -137,7 +137,7 @@ template = " {{ .Full }}"
 
 [[tooltips]]
 style = "diamond"
-foreground = "#100e23"
+foreground = "#050510"
 background = "#e4e140"
 leading_diamond = ""
 trailing_diamond = ""
