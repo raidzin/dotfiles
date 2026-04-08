@@ -1,0 +1,97 @@
+{
+  "disable_ai": true,
+
+  "base_keymap": "VSCode",
+  "show_wrap_guides": true,
+  "rounded_selection": true,
+  "current_line_highlight": "all",
+  "ui_font_family": ".ZedSans",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "buffer_line_height": "standard",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": {
+    "calt": true, // Ligatures: != => -> <= |>
+    "zero": true, // Slashed zero: 0
+    "cv06": true, // Shorten letter: m
+    "cv07": true, // Shorten letters: w, W
+    "cv14": true, // Broken line in : $
+  },
+  "terminal": {
+    "default_height": 350,
+    "scrollbar": {
+      "show": "never",
+    },
+    "font_features": {
+      "calt": false,
+      "zero": true,
+      "cv06": true,
+      "cv07": true,
+      "cv14": true,
+    },
+  },
+  "project_panel": {
+    "entry_spacing": "standard",
+    "default_width": 350,
+  },
+  "outline_panel": {
+    "dock": "right",
+    "default_width": 300,
+  },
+  "file_scan_exclusions": [
+    // Python
+    "**/__pycache__",
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    "**/.import_linter_cache",
+    // Defaults
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+  ],
+  "tabs": {
+    "file_icons": true,
+    "show_diagnostics": "all",
+    "git_status": true,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "wrap_guides": [80],
+      "language_servers": ["ty", "ruff", "!basedpyright", "!pyright", "!pylsp"],
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true,
+      },
+    },
+    "Rust": {
+      "tab_size": 4,
+      "wrap_guides": [100],
+    },
+    "Vue.js": {
+      "formatter": ["prettier"],
+    },
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
