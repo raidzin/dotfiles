@@ -1,7 +1,30 @@
 {
   "disable_ai": true,
 
+  "vim_mode": false,
   "base_keymap": "VSCode",
+  "always_treat_brackets_as_autoclosed": true,
+  "use_system_path_prompts": false,
+  "cli_default_open_behavior": "new_window",
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "extend_comment_on_newline": false,
+  "tab_bar": {
+    "show": false,
+  },
+  "status_bar": {
+    "experimental.show": false,
+    "cursor_position_button": false,
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "show_sign_in": false,
+    "show_user_menu": false,
+  },
   "show_wrap_guides": true,
   "rounded_selection": true,
   "current_line_highlight": "all",
@@ -18,7 +41,7 @@
     "cv14": true, // Broken line in : $
   },
   "terminal": {
-    "default_height": 350,
+    "default_height": 361,
     "scrollbar": {
       "show": "never",
     },
@@ -31,6 +54,7 @@
     },
   },
   "project_panel": {
+    "dock": "left",
     "entry_spacing": "standard",
     "default_width": 350,
   },
@@ -75,7 +99,14 @@
     "Python": {
       "tab_size": 4,
       "wrap_guides": [80],
-      "language_servers": ["ty", "ruff", "!basedpyright", "!pyright", "!pylsp"],
+      "language_servers": [
+        "ty",
+        "ruff",
+        "cspell",
+        "!basedpyright",
+        "!pyright",
+        "!pylsp",
+      ],
       "code_actions_on_format": {
         "source.organizeImports.ruff": true,
         "source.fixAll.ruff": true,
@@ -84,6 +115,12 @@
     "Rust": {
       "tab_size": 4,
       "wrap_guides": [100],
+    },
+    "JavaScript": {
+      "formatter": ["prettier"],
+    },
+    "TypeScript": {
+      "formatter": ["prettier"],
     },
     "Vue.js": {
       "formatter": ["prettier"],
