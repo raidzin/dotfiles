@@ -1,11 +1,22 @@
 {
   "disable_ai": true,
 
-  "vim_mode": false,
+ "vim_mode": false,
+  "inline_code_actions": true,
   "base_keymap": "VSCode",
   "always_treat_brackets_as_autoclosed": true,
   "use_system_path_prompts": false,
   "cli_default_open_behavior": "new_window",
+  "git": {
+    "blame": {
+      "show_avatar": true,
+    },
+    "inline_blame": {
+      "show_commit_summary": false,
+    },
+    "enable_diff": true,
+    "enable_status": true,
+  },
   "collaboration_panel": {
     "dock": "left",
   },
@@ -13,6 +24,7 @@
     "dock": "left",
   },
   "extend_comment_on_newline": false,
+  "max_tabs": 1,
   "tab_bar": {
     "show": false,
   },
@@ -80,11 +92,6 @@
     "**/.classpath",
     "**/.settings",
   ],
-  "tabs": {
-    "file_icons": true,
-    "show_diagnostics": "all",
-    "git_status": true,
-  },
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
@@ -127,8 +134,111 @@
     },
   },
 
+  "debugger": {
+    "stepping_granularity": "statement",
+  },
+
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
+  },
+  "theme_overrides": {
+    "Ayu Dark": {
+      "syntax": {
+        "keyword": {
+          "color": "#FF823F",
+        },
+        "operator": {
+          "color": "#FF823F",
+        },
+        "function": {
+          "color": "#FABA53",
+        },
+        "string": {
+          "color": "#32AA32",
+        },
+        "number": {
+          "color": "#6391fd",
+        },
+        "property": {
+          "color": "#bfbdb6ff",
+        },
+        "comment": {
+          "font_style": "italic",
+        },
+        "comment.doc": {
+          "font_style": "normal",
+        },
+      },
+    },
+  },
+  "semantic_tokens": "combined",
+  "lsp": {
+    "ty": {
+      "binary": {
+        "path": "C:\\Users\\goncharukak\\.local\\bin\\ty.exe",
+        "arguments": ["server"],
+      },
+    },
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "clsParameter",
+        "foreground_color": "#bb8aff",
+      },
+      {
+        "token_type": "selfParameter",
+        "foreground_color": "#bb8aff",
+      },
+      {
+        "token_type": "selfKeyword",
+        "foreground_color": "#bb8aff",
+      },
+      {
+        "token_type": "enum",
+        "style": ["type"],
+      },
+      {
+        "token_type": "parameter",
+        "token_modifiers": ["declaration"],
+        "foreground_color": "#bfbdb6ff",
+      },
+      {
+        "token_type": "parameter",
+        "token_modifiers": ["callable"],
+        "style": ["function"],
+      },
+      {
+        "token_type": "parameter",
+        "foreground_color": "#5ac1fe88",
+      },
+      {
+        "token_type": "variable",
+        "token_modifiers": ["declaration"],
+        "foreground_color": "#bfbdb6ff",
+      },
+      {
+        "token_type": "typeParameter",
+        "foreground_color": "#ff80ce",
+      },
+      {
+        "token_type": "variable",
+        "foreground_color": "#5ac1fe",
+      },
+      {
+        "token_type": "property",
+        "token_modifiers": ["declaration"],
+        "foreground_color": "#bfbdb6ff",
+      },
+      {
+        "token_type": "property",
+        "foreground_color": "#5ac1fe88",
+      },
+      {
+        "token_type": "decorator",
+        "style": ["function"],
+      },
+    ],
   },
 }
